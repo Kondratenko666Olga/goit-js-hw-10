@@ -5,3 +5,17 @@
   |============================
 */
 @import url('./reset.css');
+@import url('./1-timer.css');
+@import url('./2-snackbar.css');
+
+/* main page */
+
+a {
+  display: block;
+  margin: 15px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(255, 96, 23);
+  border: thick double #242424;
+}
