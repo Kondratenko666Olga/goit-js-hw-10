@@ -15,16 +15,15 @@ function snackbarSubmit (event) {
     const state = formData.get('state');
     
     const promise = new Promise((resolve, reject) => {
-      if (state === 'fulfilled') {
         setTimeout(() => {
-          resolve(delay);
+          if (state === 'fulfilled') {
+            resolve(delay);
+          } else {
+            reject(delay);
+          }
         }, delay);
-      } else if (state === 'rejected') {
-        setTimeout(() => {
-          reject(delay);
-        }, delay);
-      }
-    });
+      });
+      
   
     promise
       .then((delay) => {
